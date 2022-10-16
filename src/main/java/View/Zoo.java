@@ -24,7 +24,7 @@ public class Zoo {
 
     public void display(Cage cage) {
         System.out.println("----------" + cage.getAnimal().getClass() + "-------------");
-        System.out.println(cage.getAnimal().getName() + " a " + cage.getAnimal().getAge() + " ans et pèse " + cage.getAnimal().getWeight() + " kg");
+        System.out.println(cage.getAnimal().getName() + " a " + cage.getAnimal().getAge() + " ans et pèse " + cage.getAnimal().getWeight() + " g");
     }
 
     public void feed(Animal animal){
