@@ -12,9 +12,9 @@ public class Main {
         zoo.welcome(new Visitor("Annie",7));
         zoo.welcome(new Visitor("Zoe",8));
 
-        zoo.getCages().add(new Cage(new Lion("Rengar",12,100000),false));
-        zoo.getCages().add(new Cage(new Gazelle("Lilia",10,50000,10),false));
-        zoo.getCages().add(new Cage(new Monkey("Wukong",13,60000),false));
+        zoo.getCages().add(new Cage(new Lion("Rengar",12,100),false));
+        zoo.getCages().add(new Cage(new Gazelle("Lilia",10,50,10),false));
+        zoo.getCages().add(new Cage(new Monkey("Wukong",13,60),false));
 
         for (Cage cage:
                 zoo.getCages()) {

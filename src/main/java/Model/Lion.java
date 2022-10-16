@@ -1,17 +1,15 @@
 package Model;
 
-import Model.Animal;
-
 public class Lion extends Animal {
 
-    public Lion(String name, int age, int weight) {
+    public Lion(String name, int age, float weight) {
         this.name = name;
         this.age = age;
         this.weight = weight;
     }
 
     public void eat() {
-        setWeight(getWeight()+1900);
+        setWeight(getWeight()+1.9);
     }
 
     public void eat(Visitor visitor){
@@ -27,42 +25,19 @@ public class Lion extends Animal {
     }
 
     public void sleep() {
-        setWeight(getWeight()-300);
+        setWeight(getWeight()-0.3);
     }
 
     public void jump(){
-        setWeight(getWeight()-500);
+        setWeight(getWeight()-0.5);
     }
 
     public void run(){
-        setWeight(getWeight()-350);
+        setWeight(getWeight()-0.35);
     }
 
     public void roar(){
         System.out.println("Roooooar");
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public int getWeight() {
-        return weight;
-    }
-
-    public void setWeight(int weight) {
-        this.weight = weight;
-    }
 }
