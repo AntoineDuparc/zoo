@@ -1,9 +1,6 @@
-public class Monkey implements Animal {
-    private String name;
+package Model;
 
-    private int age;
-
-    private int weight;
+public class Monkey extends Animal {
 
     public Monkey(String name, int age, int weight) {
         this.name = name;

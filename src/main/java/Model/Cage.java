@@ -1,10 +1,14 @@
+package Model;
+
 public class Cage {
     private Animal animal;
     private boolean isOpen;
 
-    public Cage(){
-
+    public Cage(Animal animal, boolean isOpen) {
+        this.animal = animal;
+        this.isOpen = isOpen;
     }
+
 
     public void open(){
         setOpen(true);
@@ -12,11 +16,6 @@ public class Cage {
 
     public void close(){
         setOpen(false);
-    }
-
-    public Cage(Animal animal,boolean isOpen) {
-        this.animal = animal;
-        this.isOpen = isOpen;
     }
 
     public Animal getAnimal() {

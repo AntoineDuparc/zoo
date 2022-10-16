@@ -1,11 +1,10 @@
-public class Lion implements Animal {
-    private String name;
+package Model;
 
-    private int age;
+import Model.Animal;
 
-    private int weight;
+public class Lion extends Animal {
 
-    public Lion(String name, int age, int weight){
+    public Lion(String name, int age, int weight) {
         this.name = name;
         this.age = age;
         this.weight = weight;
@@ -16,12 +15,15 @@ public class Lion implements Animal {
     }
 
     public void eat(Visitor visitor){
-        visitor.kill();
+        visitor.die();
+        System.out.println(visitor.getName() + " is dead");
         eat();
     }
 
     public void eat(Gazelle gazelle){
-        gazelle.kill();
+        System.out.println(gazelle.getName() + " is dead");
+        gazelle.die();
+        eat();
     }
 
     public void sleep() {

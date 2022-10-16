@@ -1,7 +1,10 @@
+package Model;
+
 public class Visitor {
     private String name;
 
     private int age;
+    
 
     public Visitor(String name, int age) {
         this.name = name;
@@ -12,10 +15,10 @@ public class Visitor {
         return name;
     }
 
-    public void kill(Zoo zoo){
-        zoo.getVisitors().remove(this);
-        System.out.println(getName() + " is dead");
+    public void die(){
+        System.out.println("AH");
     }
+
 
     public void setName(String name) {
         this.name = name;
@@ -28,4 +31,5 @@ public class Visitor {
     public void setAge(int age) {
         this.age = age;
     }
+    
 }

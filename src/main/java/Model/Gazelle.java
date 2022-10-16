@@ -1,11 +1,12 @@
-public class Gazelle implements Animal {
-    private String name;
+package Model;
 
-    private int age;
+import Model.Animal;
+import Model.Cage;
 
-    private int weight;
+public class Gazelle extends Animal {
 
     private int horn;
+
 
     public Gazelle(String name,int age, int weight, int horn) {
         this.age = age;
@@ -14,12 +15,8 @@ public class Gazelle implements Animal {
         this.horn = horn;
     }
 
-    public void kill(Zoo zoo, Cage cage) throws Exception {
-        if (cage.isOpen()) {
-            zoo.getCages().remove(cage);
-            cage.setAnimal(null);
-            System.out.println(getName() + " is dead");
-        } else throw new Exception("La cage est fermée");
+    public void die() {
+        System.out.println("OUPS");
     }
 
     public void eat(){
