@@ -1,5 +1,8 @@
 package Model;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+
 public abstract class Animal {
     protected String name;
     protected int age;
@@ -14,6 +17,23 @@ public abstract class Animal {
         this.weight = weight;
     }
 
+    public double sum(double a,double b) {
+        BigDecimal bigDecimal = BigDecimal.valueOf(a+b);
+        return
+                bigDecimal.setScale(1, RoundingMode.valueOf(0))
+                        .doubleValue();
+    }
+    public abstract void eat();
+    public void eat(double weightGain){
+        setWeight(sum(getWeight(),weightGain));
+    }
+
+    public abstract void sleep();
+
+    public void sleep(double weightLoss){
+        setWeight(sum(getWeight(),-weightLoss));
+    }
+
     public double getWeight(){
         return weight;
     }
@@ -23,9 +43,6 @@ public abstract class Animal {
     public String getName(){
         return name;
     }
-    public abstract void eat();
-
-    public abstract void sleep();
 
     public void setName(String name) {
         this.name = name;

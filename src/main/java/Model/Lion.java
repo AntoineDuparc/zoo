@@ -1,15 +1,18 @@
 package Model;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+
 public class Lion extends Animal {
 
-    public Lion(String name, int age, float weight) {
+    public Lion(String name, int age, double weight) {
         this.name = name;
         this.age = age;
         this.weight = weight;
     }
 
     public void eat() {
-        setWeight(getWeight()+1.9);
+        eat(1.9);
     }
 
     public void eat(Visitor visitor){
@@ -25,15 +28,15 @@ public class Lion extends Animal {
     }
 
     public void sleep() {
-        setWeight(getWeight()-0.3);
+        sleep(0.3);
     }
 
     public void jump(){
-        setWeight(getWeight()-0.5);
+        setWeight(sum(getWeight(),-0.5));
     }
 
     public void run(){
-        setWeight(getWeight()-0.35);
+        setWeight(sum(getWeight(),-0.35));
     }
 
     public void roar(){
